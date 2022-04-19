@@ -1,0 +1,8 @@
+---
+- hosts: master
+  tasks:
+   - name: uninstall httpd
+     package: name=httpd state=absent
+     become: yes
+     become_user: root
+     remote_user: ansible
